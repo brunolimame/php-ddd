@@ -1,0 +1,13 @@
+{
+    "name": "brunolimame/php-ddd",
+    "description": "Aplicando ddd utilizando php",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Bruno Lima",
+            "email": "brunolimame@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}

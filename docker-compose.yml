@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: php.Dockerfile
+    container_name: ddd_php
+    working_dir: /var/www
+    volumes:
+      - ./:/var/www
+    networks:
+      - php-ddd
+  nginx:
+    image: nginx:1.15.0-alpine
+    container_name: ddd_nginx
+    restart: always
+    volumes:
+      - ./:/var/www
+      - ./.docker/nginx/conf.d:/etc/nginx/conf.d
+    ports:
+      - "80:80"
+    networks:
+      - php-ddd
+    depends_on:
+      - php
+
+networks:
+  php-ddd:
+    driver: bridge
