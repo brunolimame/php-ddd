@@ -9,5 +9,9 @@ RUN docker-php-ext-install pdo_mysql zip
 # Get latest Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
+ADD .docker/php/infra/extensions/xdebug.sh /root/install-xdebug.sh
+RUN sh /root/install-xdebug.sh
+COPY .docker/php/infra/conf.d /usr/local/etc/php/conf.d/
+
 # Set working directory
 WORKDIR /var/www

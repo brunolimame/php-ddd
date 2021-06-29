@@ -8,6 +8,22 @@
             "email": "brunolimame@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
-    "require": {}
+    "minimum-stability": "RC",
+    "require": {
+        "php": "^8.0"
+    },
+    "require-dev": {
+        "ext-xdebug": "*",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "PhpDdd\\": ["src"]
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PhpDdd\\Tests\\": ["tests"]
+        }
+    }
 }
