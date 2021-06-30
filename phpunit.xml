@@ -10,6 +10,7 @@
         beStrictAboutTestsThatDoNotTestAnything="false"
         beStrictAboutTodoAnnotatedTests="true"
         colors="true"
+        bootstrap="vendor/autoload.php"
         convertErrorsToExceptions="true"
         convertNoticesToExceptions="true"
         convertWarningsToExceptions="true"
@@ -23,8 +24,6 @@
 
     <php>
         <ini name="error_reporting" value="-1" />
-        <env name="SYMFONY_DEPRECATIONS_HELPER" value="weak" />
-        <env name="APP_ENV" value="test"/>
     </php>
 
     <testsuites>

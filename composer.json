@@ -8,9 +8,16 @@
             "email": "brunolimame@gmail.com"
         }
     ],
+    "scripts": {
+        "phpunit": "clear && ./vendor/bin/phpunit",
+        "test": [
+            "@phpunit"
+        ]
+    },
     "minimum-stability": "RC",
     "require": {
-        "php": "^8.0"
+        "php": "^8.0",
+        "ramsey/uuid": "^4.1"
     },
     "require-dev": {
         "ext-xdebug": "*",
